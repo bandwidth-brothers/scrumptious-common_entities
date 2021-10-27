@@ -1,5 +1,5 @@
 # scrumptious-common_entities
-## Step 1: enerate a jar file
+## Step 1: generate a jar file
 run command: maven clean install
 ## Step 2: revome the existed common entitis in target project
 in target project, revome the existed common entitis that has been created in common_entites jar file
