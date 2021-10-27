@@ -10,7 +10,7 @@ in target project, revome the existed common entitis that has been created in co
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 ## Step 4: add @EntityScan annotation on starting class
-    @EntityScan(basePackages = {"com.ss.scrumptious.common_entities.entity"})__
+    @EntityScan(basePackages = {"com.ss.scrumptious.common_entities.entity"})
     public class ScrumptiousRestaurantServiceApplication{}
 ## Step 5: clean any import file error
 start from repository, service interface, servcieImpl, other support file (dto, exception, ect.), controllers
