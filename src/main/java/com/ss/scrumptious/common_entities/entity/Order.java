@@ -43,7 +43,7 @@ public class Order {
 
     private Float discount;
 
-    @Column(name = "submitted_at")
+    @Column(name = "submited_at")
     @CreationTimestamp
     private ZonedDateTime submittedAt;
 
