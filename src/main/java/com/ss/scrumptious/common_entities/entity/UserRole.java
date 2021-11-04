@@ -1,6 +1,6 @@
 package com.ss.scrumptious.common_entities.entity;
 
-public enum  UserRole {
+public enum UserRole {
 
     DEFAULT("ROLE_DEFAULT"),
     CUSTOMER("ROLE_CUSTOMER"),

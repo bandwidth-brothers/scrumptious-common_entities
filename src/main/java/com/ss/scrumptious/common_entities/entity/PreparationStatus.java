@@ -1,10 +1,13 @@
 package com.ss.scrumptious.common_entities.entity;
 
 public enum PreparationStatus{
-    PENDING("PENDING"),
-    CANCEL("CANCEL"),
-    READY("READY"),
-    COMPLETE("COMPLETE");
+    CREATING("CREATING"),
+    ORDER_PLACED("ORDER PLACED"),
+    CANCELLED("CANCELLED"),
+    PREPARING("PREPARING"),
+    READY_FOR_PICKUP("READY FOR PICKUP"),
+    DELIVERY("DELIVERY"),
+    COMPLETED("COMPLETED");
 
     private final String status;
 
@@ -13,7 +16,7 @@ public enum PreparationStatus{
     }
 
     public String getStatus() {
-        return getStatus();
+        return status;
     }
 
 }
