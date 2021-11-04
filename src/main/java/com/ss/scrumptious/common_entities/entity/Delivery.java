@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.ZonedDateTime;
@@ -32,8 +31,10 @@ public class Delivery {
     @Column(name = "estimated_delivery_time")
     private ZonedDateTime estimatedDeliveryTime;
 
+    @Builder.Default
     @Column(name = "delivery_status")
-    private String deliveryStatus;
+    @Enumerated(EnumType.STRING)
+    private DeliveryStatus deliveryStatus = DeliveryStatus.UNASSIGNED;
 
     @Column(name = "actual_delivery_time")
     private ZonedDateTime actualDeliveryTime;

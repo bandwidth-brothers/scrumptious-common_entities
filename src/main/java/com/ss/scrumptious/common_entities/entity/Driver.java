@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -19,7 +20,7 @@ import java.util.UUID;
 public class Driver {
 
     @Id
-    @Column(columnDefinition = "BINARY(16)")
+    @Column(columnDefinition = "BINARY(16)", updatable = false, nullable = false)
     private UUID id;
 
     @NotBlank
@@ -38,11 +39,10 @@ public class Driver {
     @Column(nullable = false)
     private String email;
 
-    //@NotBlank
-    @Column(name = "dob")//, nullable = false)
+    @Column(name = "dob")
     private Date dob;
 
-    //@NotBlank
+    @NotBlank
     @Column(name = "license_num")
     private String licenseNumber;
 
@@ -52,7 +52,9 @@ public class Driver {
 
     private String picture;
 
-    private String status;
+    @Builder.Default
+    @NotBlank
+    private String status = "Idle";
 
     @OneToOne
     @JoinColumn(name = "address_id")

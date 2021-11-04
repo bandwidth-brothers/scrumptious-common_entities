@@ -32,6 +32,7 @@ public class Order {
     @ManyToOne
     private Customer customer;
 
+    @Builder.Default
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
     private Set<MenuitemOrder> menuitemOrder = new HashSet<>();
@@ -50,7 +51,7 @@ public class Order {
     @Builder.Default
     @Column(name = "preparation_status")
     @Enumerated(EnumType.STRING)
-    private PreparationStatus status = PreparationStatus.PENDING;
+    private PreparationStatus status = PreparationStatus.CREATING;
 
 
 }

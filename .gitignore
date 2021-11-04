@@ -5,7 +5,8 @@
 
 # User-specific stuff
 .idea/**
-.iml
+*.iml
+bin
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -31,6 +32,10 @@ cmake-build-*/
 
 # IntelliJ
 out/
+
+# vscode
+.vscode
+.settings
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -66,3 +71,6 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
+.project
+.factorypath
+.classpath

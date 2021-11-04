@@ -1,6 +1,7 @@
 package com.ss.scrumptious.common_entities.entity;
 
 public enum PreparationStatus{
+    CREATING("CREATING"),
     ORDER_PLACED("ORDER PLACED"),
     CANCELLED("CANCELLED"),
     PREPARING("PREPARING"),
