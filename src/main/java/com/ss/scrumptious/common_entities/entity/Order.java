@@ -44,14 +44,14 @@ public class Order {
 
     private Float discount;
 
-    @Column(name = "submited_at")
+    @Column(name = "submitted_at")
     @CreationTimestamp
     private ZonedDateTime submittedAt;
 
     @Builder.Default
     @Column(name = "preparation_status")
-    @Enumerated(EnumType.STRING)
-    private PreparationStatus status = PreparationStatus.CREATING;
+    //@Enumerated(EnumType.STRING)
+    private String preparationStatus = "CREATING";
 
 
 }
