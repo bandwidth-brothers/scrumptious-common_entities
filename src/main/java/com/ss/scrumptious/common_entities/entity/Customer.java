@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -47,6 +48,15 @@ public class Customer {
     @Column(name = "loyalty_points", nullable = false)
     private Integer loyaltyPoints = 0;
 
+    @Nullable
+    @Column(name = "picture")
+    private String picture;
+
+
+    // without columnDefinition = "TINYINT" mysql will default to bit(1)
+    @Builder.Default
+    @Column(name = "veteran_status", columnDefinition = "TINYINT")
+    private Boolean veteranStatus = false;
 
     @OneToOne
     @JoinColumn(name = "address_id")
