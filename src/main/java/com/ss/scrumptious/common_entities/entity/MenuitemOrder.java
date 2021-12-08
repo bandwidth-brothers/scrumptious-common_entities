@@ -25,6 +25,11 @@ public class MenuitemOrder {
     @JoinColumn(name = "menuitem_id")
     Menuitem menuitem;
 
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @MapsId("orderId")
+    @JoinColumn(name = "order_id")
+    Order order;
 
     Long quantity;
 }
