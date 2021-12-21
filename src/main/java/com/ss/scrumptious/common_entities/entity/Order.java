@@ -11,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import java.time.ZonedDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -32,10 +33,8 @@ public class Order {
     @ManyToOne
     private Customer customer;
 
-    @Builder.Default
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
-    private Set<MenuitemOrder> menuitemOrder = new HashSet<>();
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    List<MenuitemOrder> menuitemOrders;
 
     private String confirmationCode;
 
