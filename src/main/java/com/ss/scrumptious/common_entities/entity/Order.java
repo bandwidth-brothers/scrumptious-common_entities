@@ -36,11 +36,6 @@ public class Order {
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     List<MenuitemOrder> menuitemOrders;
 
-//    @Builder.Default
-//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinColumn(name = "order_id")
-//    private Set<MenuitemOrder> menuitemOrder = new HashSet<>();
-
     private String confirmationCode;
 
 
