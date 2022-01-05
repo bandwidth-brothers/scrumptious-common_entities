@@ -23,6 +23,9 @@ public class Payment {
     @ManyToOne
     private Customer customer;
 
+    @OneToOne
+    private Order order;
+
     @NotNull
     private String name;
 
